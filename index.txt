@@ -1,0 +1,41 @@
+// import React from "react"
+// import { graphql } from "gatsby"
+// import { SliceZone } from "@prismicio/react"
+
+// import { components } from "../slices"
+
+// import GlobalStyle from "../../globalStyles"
+
+// import Layout from "../components/Layout"
+
+// export default function Home({ data }) {
+//   const doc = data.prismicPage.data
+//   console.log(doc.body[0].primary.verse.text)
+//   return (
+//     <>
+//       <Layout>
+//         <div>{doc.title.text}</div>
+//         <SliceZone slices={doc.body} components={components} />
+//       </Layout>
+//     </>
+//   )
+// }
+
+// export const query = graphql`
+//   query Homepage {
+//     prismicPage {
+//       id
+//       data {
+//         title {
+//           text
+//         }
+//         body {
+//           ... on PrismicSliceType {
+//             slice_type
+//           }
+//           ...PageDataBodyBibleVerseBlock
+//         }
+//       }
+//     }
+//   }
+// `
