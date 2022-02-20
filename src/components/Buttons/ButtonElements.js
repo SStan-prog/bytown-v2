@@ -16,9 +16,10 @@ export const Btn = styled(PrismicLink)`
 
   transition: all 0.3s ease;
 
-  max-width: min-content;
   max-height: min-content;
   white-space: nowrap;
+  min-width: 12.5rem;
+  text-align: center;
 
   & :hover {
     transform: scale(1.05);

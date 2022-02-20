@@ -9,8 +9,6 @@ import { components } from "../slices"
 const PageTemplate = ({ data }) => {
   if (!data) return null
 
-  console.log(data)
-
   const doc = data.prismicPage.data
 
   return (
@@ -28,7 +26,15 @@ export const query = graphql`
           ... on PrismicSliceType {
             slice_type
           }
+          ...PageDataBodyHeader
           ...PageDataBodyBibleVerse
+          ...PageDataBodyContentBlock
+          ...PageDataBodyCallToAction
+          ...PageDataBodyDonationOptions
+          ...PageDataBodyChurchBeliefs
+          ...PageDataBodyChurchPartners
+          ...PageDataBodyEventMenu
+          ...PageDataBodyContactForm
         }
       }
     }

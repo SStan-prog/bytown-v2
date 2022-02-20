@@ -85,6 +85,13 @@
             "icon": "border_color",
             "display": "grid",
             "non-repeat": {
+              "block_id": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "rtl",
+                  "label": "block Id"
+                }
+              },
               "image": {
                 "type": "Image",
                 "config": {
@@ -141,6 +148,22 @@
                   "placeholder_true": "Right",
                   "default_value": false,
                   "label": "Image placement"
+                }
+              },
+              "image_width": {
+                "type": "Select",
+                "config": {
+                  "options": ["short", "half-size", "wide"],
+                  "default_value": "short",
+                  "label": "Image Width"
+                }
+              },
+              "text_alignment": {
+                "type": "Select",
+                "config": {
+                  "options": ["left", "center", "right"],
+                  "default_value": "left",
+                  "label": "Text Alignment"
                 }
               }
             },

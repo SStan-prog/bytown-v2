@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 import {
   NavContainer,
@@ -15,12 +16,14 @@ import { ButtonRed } from "../../Buttons"
 const index = () => {
   return (
     <NavContainer>
-      <NavLogoContainer>
-        <StaticImage
-          src="../../../images/LogoAltWhite.png"
-          alt="The Bytown Community Church logo."
-        />
-      </NavLogoContainer>
+      <Link to={"/"}>
+        <NavLogoContainer>
+          <StaticImage
+            src="../../../images/LogoAltWhite.png"
+            alt="The Bytown Community Church logo."
+          />
+        </NavLogoContainer>
+      </Link>
       <NavList>
         <NavItem>
           <NavLink href="who-we-are">Who We Are</NavLink>

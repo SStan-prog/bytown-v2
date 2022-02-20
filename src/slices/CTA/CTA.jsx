@@ -5,6 +5,8 @@ import { ButtonGreen, ButtonWhite } from "../../components/Buttons"
 import { CTASection, CTAContainer, CTAText, CTAButtons } from "./CTAElements"
 
 const CTA = ({ slice }) => {
+  console.log(slice)
+
   return (
     <CTASection>
       <CTAContainer>
@@ -31,7 +33,33 @@ const CTA = ({ slice }) => {
 export default CTA
 
 export const query = graphql`
+  fragment PageDataBodyCallToAction on PrismicPageDataBodyCallToAction {
+    primary {
+      paragraph {
+        html
+      }
+    }
+    items {
+      button_link {
+        url
+      }
+      button_label
+    }
+  }
   fragment HomepageDataBodyCallToAction on PrismicHomepageDataBodyCallToAction {
+    primary {
+      paragraph {
+        html
+      }
+    }
+    items {
+      button_link {
+        url
+      }
+      button_label
+    }
+  }
+  fragment SermonSeriesDataBodyCallToAction on PrismicSermonSeriesDataBodyCallToAction {
     primary {
       paragraph {
         html

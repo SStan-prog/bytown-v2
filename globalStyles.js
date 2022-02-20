@@ -45,12 +45,16 @@ body{
 
     //FONT SIZES
 
-    --font-size-headingL: clamp(2.4rem, 2vw, 2.8rem);
-    --font-size-headingM: clamp(2rem, 2vw, 2.4rem);
+    --font-size-headingL: clamp(2.8rem, 2vw, 3.2rem);
+    --font-size-headingM: clamp(2.4rem, 2vw, 2.8rem);
+    --font-size-headingS: clamp(2rem, 2vw, 2.4rem);
 
    
     --font-size-bodyL: clamp(1.8rem, 1.5vw, 2rem);
     --font-size-bodyM: clamp(1.6rem, 1.5vw, 1.8rem);
+    --font-size-bodyS: clamp(1.4rem, 1.5vw, 1.6rem);
+    --font-size-bodyXS: 1.25rem;
+
 
     --font-size-verse: clamp(1.8rem, 3vw, 2.4rem);
     --font-size-btn: clamp(1.8rem, 3vw, 2rem);

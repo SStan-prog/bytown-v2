@@ -1,0 +1,154 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "uid"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": null,
+        "choices": {
+          "header": {
+            "type": "Slice",
+            "fieldset": "Header",
+            "description": "Page Header ",
+            "icon": "border_color",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Heading"
+                }
+              },
+              "body_text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "rtl",
+                  "label": "body text"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              }
+            },
+            "repeat": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "button link",
+                  "select": null
+                }
+              },
+              "button_label": {
+                "type": "Text",
+                "config": {
+                  "label": "button label"
+                }
+              }
+            }
+          },
+          "call_to_action": {
+            "type": "Slice",
+            "fieldset": "Call to action",
+            "description": "Call to action section for midpage or end of page",
+            "icon": "arrow_forward",
+            "display": "list",
+            "non-repeat": {
+              "icon_image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Icon Image"
+                }
+              },
+              "paragraph": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+                  "label": "Paragraph"
+                }
+              }
+            },
+            "repeat": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button Link",
+                  "select": null
+                }
+              },
+              "button_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Button Label",
+                  "placeholder": "Text for button"
+                }
+              }
+            }
+          },
+          "sermon_archive": {
+            "type": "Slice",
+            "fieldset": "Sermon Archive",
+            "description": "Add new sermons here.",
+            "icon": "video_library",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Heading"
+                }
+              }
+            },
+            "repeat": {
+              "sermon_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3",
+                  "label": "Sermon Title"
+                }
+              },
+              "sermon_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Sermon Link",
+                  "placeholder": "Link to sermon youtube video",
+                  "select": null,
+                  "allowTargetBlank": true
+                }
+              },
+              "sermon_preacher": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,rtl",
+                  "label": "Sermon preacher",
+                  "placeholder": "Name of sermon preacher"
+                }
+              },
+              "sermon_date": {
+                "type": "Date",
+                "config": {
+                  "label": "Sermon Date",
+                  "placeholder": "Date the sermon was preached."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

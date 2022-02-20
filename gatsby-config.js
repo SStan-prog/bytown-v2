@@ -27,6 +27,7 @@ module.exports = {
         schemas: {
           homepage: require("./src/schemas/homepage.json"),
           page: require("./src/schemas/page.json"),
+          sermon_series: require("./src/schemas/sermonseries.json"),
           home: {},
         },
       },
