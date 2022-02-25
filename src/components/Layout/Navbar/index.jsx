@@ -59,7 +59,7 @@ const Index = () => {
           <NavMobileLine open={open} />
         </NavMobileBtn>
       </NavContainer>
-      <MobileMenu open={open} />
+      <MobileMenu open={open} toggle={toggle} />
     </>
   )
 }
