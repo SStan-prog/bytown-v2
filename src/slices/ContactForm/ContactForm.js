@@ -26,15 +26,15 @@ const ContactForm = ({ slice }) => {
           <input type="hidden" name="form-name" value="contact" />
           <FormInputContainer>
             <FormLabel>Name</FormLabel>
-            <FormInput type="text" required />
+            <FormInput type="text" name="Name" required />
           </FormInputContainer>
           <FormInputContainer>
             <FormLabel>Email Address</FormLabel>
-            <FormInput type="text" required />
+            <FormInput type="text" name="Email" required />
           </FormInputContainer>
           <FormInputContainer>
             <FormLabel>Questions or Message</FormLabel>
-            <FormTextarea required />
+            <FormTextarea required name="Message" />
           </FormInputContainer>
           <FormBtn type="submit">Send</FormBtn>
         </Form>
