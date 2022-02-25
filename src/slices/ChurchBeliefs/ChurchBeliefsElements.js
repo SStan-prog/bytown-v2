@@ -24,10 +24,14 @@ export const BeliefsContainer = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
 
-  max-width: 140rem;
+  max-width: 160rem;
 
   margin: 0 -2.5rem;
   transform: translateX(-5rem);
+
+  ${media.laptop`
+  max-width: 140rem;
+  `}
 
   & div {
     margin: 2.5rem;

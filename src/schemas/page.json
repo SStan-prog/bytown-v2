@@ -414,13 +414,65 @@
               "body1": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, strong, em, hyperlink, list-item, o-list-item, rtl",
+                  "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item,rtl",
                   "allowTargetBlank": true,
                   "label": "Body"
                 }
               }
             },
             "repeat": {}
+          },
+          "latest_sermon": {
+            "type": "Slice",
+            "fieldset": "Latest Sermon",
+            "description": "A block featuring the latest sermon.",
+            "icon": "video_library",
+            "display": "list",
+            "non-repeat": {
+              "sermon_series_url": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "rtl",
+                  "label": "Sermon series url"
+                }
+              },
+              "latest_sermon_series": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": ["sermon_series"],
+                  "tags": ["Latest"],
+                  "label": "Latest Sermon Series"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "all_series": {
+            "type": "Slice",
+            "fieldset": "All Series",
+            "description": "A block featuring all sermon series.",
+            "icon": "video_library",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Heading"
+                }
+              }
+            },
+            "repeat": {
+              "series_archive": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": ["sermon_series"],
+                  "label": "Series Archive"
+                }
+              }
+            }
           }
         }
       }

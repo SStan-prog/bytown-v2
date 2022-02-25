@@ -24,11 +24,15 @@ export const PartnersContainer = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
 
-  max-width: 140rem;
+  max-width: 160rem;
 
   margin: 0 -2.5rem;
 
   & > div {
     margin: 2.5rem;
   }
+
+  ${media.laptop`
+  max-width: 140rem;
+  `}
 `

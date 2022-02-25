@@ -5,7 +5,25 @@ import { ButtonGreen, ButtonWhite } from "../../components/Buttons"
 import { CTASection, CTAContainer, CTAText, CTAButtons } from "./CTAElements"
 
 const CTA = ({ slice }) => {
-  console.log(slice)
+  if (!slice.items[1]) {
+    return (
+      <CTASection>
+        <CTAContainer>
+          <CTAText
+            dangerouslySetInnerHTML={{
+              __html: `${slice.primary.paragraph.html}`,
+            }}
+          ></CTAText>
+          <CTAButtons>
+            <ButtonGreen
+              link={slice.items[0].button_link.url}
+              btnText={slice.items[0].button_label}
+            />
+          </CTAButtons>
+        </CTAContainer>
+      </CTASection>
+    )
+  }
 
   return (
     <CTASection>
@@ -60,6 +78,19 @@ export const query = graphql`
     }
   }
   fragment SermonSeriesDataBodyCallToAction on PrismicSermonSeriesDataBodyCallToAction {
+    primary {
+      paragraph {
+        html
+      }
+    }
+    items {
+      button_link {
+        url
+      }
+      button_label
+    }
+  }
+  fragment BlogPostDataBodyCallToAction on PrismicBlogPostDataBodyCallToAction {
     primary {
       paragraph {
         html

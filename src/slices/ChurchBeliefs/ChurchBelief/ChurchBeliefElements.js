@@ -1,13 +1,19 @@
 import styled from "styled-components"
+import { media } from "../../../../styles"
 
 export const Card = styled.div`
   background-color: transparent;
-  width: 25rem;
-  height: 30rem;
+  width: 30rem;
+  height: 35rem;
 
   perspective: 1000px;
 
   margin: 0 auto;
+
+  ${media.laptop`
+  width: 25rem;
+  height: 30rem;
+  `}
 `
 
 export const CardInner = styled.div`
@@ -42,14 +48,18 @@ export const CardFront = styled.div`
 
 export const Heading = styled.h3`
   color: var(--color-white);
-  font-size: var(--font-size-bodyM);
+  font-size: var(--font-size-headingS);
   font-family: var(--font-heading);
+
+  ${media.laptop`
+  bottom: 7rem;
+  `}
 `
 
 export const IconContainer = styled.div`
   position: absolute;
 
-  bottom: 7rem;
+  bottom: 10rem;
   left: 50%;
   transform: translateX(calc(-50% - 2.5rem));
 
@@ -64,6 +74,10 @@ export const IconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${media.laptop`
+  bottom: 7rem;
+  `}
 `
 export const Icon = styled.img`
   width: 100%;
@@ -123,11 +137,15 @@ export const CardBack = styled.div`
 `
 export const CardBody = styled.div`
   color: var(--color-white);
-  font-size: var(--font-size-bodyXS);
+  font-size: calc(var(--font-size-bodyS) - 0.1rem);
   font-family: var(--font-body);
 
   transform: translateY(-2.5rem);
   margin: 2rem 0.7rem !important;
+
+  ${media.laptop`
+  font-size: var(--font-size-bodyXS);
+  `}
 `
 
 export const CardBackBtn = styled.div`

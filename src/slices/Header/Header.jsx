@@ -17,8 +17,6 @@ import {
 } from "./HeaderElements"
 
 const index = ({ slice }) => {
-  console.log(slice)
-
   return (
     <HeaderElement>
       <HeaderContainer>
@@ -74,6 +72,25 @@ export const query = graphql`
     }
   }
   fragment SermonSeriesDataBodyHeader on PrismicSermonSeriesDataBodyHeader {
+    primary {
+      body_text {
+        text
+      }
+      image {
+        url
+      }
+      heading {
+        text
+      }
+    }
+    items {
+      button_link {
+        url
+      }
+      button_label
+    }
+  }
+  fragment BlogPostDataBodyHeader on PrismicBlogPostDataBodyHeader {
     primary {
       body_text {
         text

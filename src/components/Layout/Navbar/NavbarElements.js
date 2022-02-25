@@ -58,12 +58,17 @@ export const NavMobileBtn = styled.div`
   margin-right: 2.5rem;
 
   display: none;
+
+  position: relative;
+  z-index: 999;
+
   ${media.tabland`
   display:block;
   `}
 `
 export const NavMobileLine = styled.div`
-  background: var(--color-white);
+  background: ${props =>
+    props.open ? "var(--color-black)" : "var(--color-white)"};
   height: 0.3rem;
   margin: 0.5rem 0;
   width: 100%;

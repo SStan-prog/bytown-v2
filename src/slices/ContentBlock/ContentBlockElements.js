@@ -35,6 +35,7 @@ export const ContentBlockImageContainer = styled.div`
     width: 100%;
 
     margin-bottom: -0.3rem;
+    max-height: 70rem;
 
     object-fit: cover;
 

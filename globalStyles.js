@@ -16,11 +16,15 @@ html {
   margin: 0 auto;
   height:100%;
   max-width: 200rem;
+  overflow-x: hidden;
   
 }
 
 body{
-  background-color: var(--color-white)
+  background-color: var(--color-white);
+  overflow-x: hidden;
+
+  
 }
 
 :root{
@@ -66,6 +70,11 @@ body{
     
 
 }
+
+.mobile-menu-open {
+    overflow-y: hidden;
+    height: 100%;
+  }
 
 
 

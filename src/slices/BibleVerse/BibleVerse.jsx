@@ -43,4 +43,14 @@ export const query = graphql`
       }
     }
   }
+  fragment BlogPostDataBodyBibleVerse on PrismicBlogPostDataBodyBibleVerse {
+    primary {
+      verse {
+        text
+      }
+      verse_location {
+        text
+      }
+    }
+  }
 `

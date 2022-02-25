@@ -14,9 +14,13 @@ export const HeaderContainer = styled.div`
 
 export const HeaderTextContainer = styled.div`
   color: var(--color-black);
-  padding: 5rem 2.5rem;
+  padding: 5rem 2.5rem 5rem 7.5rem;
 
   line-height: var(--line-height-body);
+
+  ${media.laptop`
+  padding: 5rem 2.5rem;
+  `}
 
   ${media.tabland`
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),

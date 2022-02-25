@@ -3,7 +3,7 @@
     "uid": {
       "type": "UID",
       "config": {
-        "label": "uid"
+        "label": "UID"
       }
     },
     "body": {
@@ -98,61 +98,50 @@
               }
             }
           },
-          "sermon_archive": {
+          "bible_verse": {
             "type": "Slice",
-            "fieldset": "Sermon Archive",
-            "description": "Add new sermons here.",
-            "icon": "video_library",
+            "fieldset": "Bible Verse",
+            "description": "Bible verse ",
+            "icon": "library_books",
             "display": "list",
             "non-repeat": {
-              "heading": {
+              "verse": {
                 "type": "StructuredText",
                 "config": {
-                  "single": "heading2",
-                  "label": "Heading"
+                  "single": "paragraph",
+                  "label": "Verse",
+                  "placeholder": "For God so loved the world...."
+                }
+              },
+              "verse_location": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Verse location",
+                  "placeholder": "John: 3:16"
                 }
               }
             },
-            "repeat": {
-              "sermon_title": {
+            "repeat": {}
+          },
+          "blog_content": {
+            "type": "Slice",
+            "fieldset": "Blog Content",
+            "description": "The main blog content for a post.",
+            "icon": "border_color",
+            "display": "list",
+            "non-repeat": {
+              "main_text": {
                 "type": "StructuredText",
                 "config": {
-                  "single": "heading3",
-                  "label": "Sermon Title"
-                }
-              },
-              "sermon_link": {
-                "type": "Link",
-                "config": {
-                  "label": "Sermon Link",
-                  "placeholder": "Link to sermon youtube video",
-                  "select": null,
-                  "allowTargetBlank": true
-                }
-              },
-              "sermon_preacher": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph,rtl",
-                  "label": "Sermon preacher",
-                  "placeholder": "Name of sermon preacher"
-                }
-              },
-              "sermon_date": {
-                "type": "Date",
-                "config": {
-                  "label": "Sermon Date",
-                  "placeholder": "Date the sermon was preached."
-                }
-              },
-              "sermon_description": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "rtl",
-                  "label": "Sermon Description"
+                  "multi": "paragraph, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, list-item, o-list-item, rtl",
+                  "allowTargetBlank": true,
+                  "label": "Main text",
+                  "labels": ["right-align", "center-align"]
                 }
               }
-            }
+            },
+            "repeat": {}
           }
         }
       }

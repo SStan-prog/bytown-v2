@@ -9,6 +9,9 @@ import ChurchPartners from "./ChurchPartners/ChurchPartners"
 import EventMenu from "./EventsMenu/EventsMenu"
 import ContactForm from "./ContactForm/ContactForm"
 import SermonArchive from "./SermonArchive/SermonArchive"
+import LatestSermon from "./LatestSermon/LatestSermon"
+import AllSeries from "./AllSeries/AllSeries"
+import BlogContent from "./BlogContent/BlogContent"
 
 export const components = {
   home_header: HomeHeader,
@@ -21,6 +24,9 @@ export const components = {
   event_menu: EventMenu,
   contact_form: ContactForm,
   sermon_archive: SermonArchive,
+  latest_sermon: LatestSermon,
+  all_series: AllSeries,
+  blog_content: BlogContent,
 
   //Extra _ because prismis is silly
   church_beliefs_: ChurchBeliefs,

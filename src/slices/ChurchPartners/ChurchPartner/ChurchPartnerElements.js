@@ -3,10 +3,15 @@ import { media } from "../../../../styles"
 
 export const Card = styled.div`
   background-color: transparent;
-  width: 33rem;
-  height: 39rem;
+  width: 36rem;
+  height: 44rem;
 
   perspective: 1000px;
+
+  ${media.laptop`
+  width: 33rem;
+  height: 39rem;
+  `}
 `
 
 export const CardInner = styled.div`
@@ -37,21 +42,30 @@ export const CardFront = styled.div`
 
 export const Description = styled.div`
   color: var(--color-black);
-  font-size: var(--font-size-bodyS);
+  font-size: var(--font-size-bodyM);
   font-family: var(--font-heading);
 
   margin: 2.5rem 1rem !important;
+
+  ${media.laptop`
+  font-size: var(--font-size-bodyS);
+  `}
 `
 
 export const LogoContainer = styled.div`
-  height: 10rem;
-  width: 20rem;
+  height: 15rem;
+  width: 25rem;
 
   margin: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${media.laptop`
+  height: 10rem;
+  width: 20rem;
+  `}
 `
 export const Logo = styled.img`
   width: 100%;
@@ -98,11 +112,15 @@ export const CardBack = styled.div`
 `
 export const FullDescription = styled.div`
   color: var(--color-white);
-  font-size: var(--font-size-bodyXS);
+  font-size: calc(var(--font-size-bodyS) - 0.15rem);
   font-family: var(--font-body);
 
   transform: translateY(-2.5rem);
   margin: 2rem 0.7rem !important;
+
+  ${media.laptop`
+  font-size: var(--font-size-bodyXS);
+  `}
 
   & a {
     color: var(--color-white);
