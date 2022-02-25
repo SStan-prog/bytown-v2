@@ -36,7 +36,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/favicon.io",
+        name: `Bytown Church`,
+        short_name: `Bytown Church`,
+        start_url: `/`,
+        icons: [
+          {
+            src: `/favicons/favicon.io`,
+          },
+        ],
       },
     },
     {
