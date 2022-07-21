@@ -30,6 +30,7 @@ export const query = graphql`
           ...HomepageDataBodyBibleVerse
           ...HomepageDataBodyCallToAction
           ...HomepageDataBodyContentBlock
+          ...HomepageDataBodySeo
         }
       }
     }

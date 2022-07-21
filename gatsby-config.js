@@ -22,6 +22,7 @@ module.exports = {
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         linkResolver: require("./linkResolver").linkResolver,
 
         schemas: {
@@ -34,25 +35,23 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: `Bytown Church`,
-        short_name: `Bytown Church`,
-        start_url: `/`,
-        icons: [
-          {
-            src: `/favicons/favicon.io`,
-          },
-        ],
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-manifest",
+    //   options: {
+    //     name: `Bytown Church`,
+    //     short_name: `Bytown Church`,
+    //     start_url: `/`,
+    //     background_color: `#F0F8EA`,
+    //     theme_color: `#F0F8EA`,
+    //     icon: `content/assets/favicon.png`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

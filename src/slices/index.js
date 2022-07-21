@@ -12,6 +12,7 @@ import SermonArchive from "./SermonArchive/SermonArchive"
 import LatestSermon from "./LatestSermon/LatestSermon"
 import AllSeries from "./AllSeries/AllSeries"
 import BlogContent from "./BlogContent/BlogContent"
+import SEO from "./SEO/SEO"
 
 export const components = {
   home_header: HomeHeader,
@@ -27,7 +28,8 @@ export const components = {
   latest_sermon: LatestSermon,
   all_series: AllSeries,
   blog_content: BlogContent,
+  seo: SEO,
 
-  //Extra _ because prismis is silly
+  //Extra _ because prismic is silly
   church_beliefs_: ChurchBeliefs,
 }

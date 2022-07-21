@@ -10,7 +10,7 @@
       "type": "Slices",
       "fieldset": "Slice zone",
       "config": {
-        "labels": null,
+        "labels": {},
         "choices": {
           "header": {
             "type": "Slice",
@@ -153,6 +153,30 @@
                 }
               }
             }
+          },
+          "seo": {
+            "type": "Slice",
+            "fieldset": "SEO",
+            "description": "Add page title and meta description",
+            "icon": "computer",
+            "display": "list",
+            "non-repeat": {
+              "page_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Page title"
+                }
+              },
+              "meta_description": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Meta description"
+                }
+              }
+            },
+            "repeat": {}
           }
         }
       }
