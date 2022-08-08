@@ -43,6 +43,10 @@ export const Container = styled.div`
     font-size: var(--font-size-bodyL);
   }
 
+  & p {
+    margin: 1.6rem 0;
+  }
+
   & p,
   ul,
   ol {

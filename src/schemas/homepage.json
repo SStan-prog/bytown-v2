@@ -10,7 +10,7 @@
       "type": "Slices",
       "fieldset": "Slice zone",
       "config": {
-        "labels": {},
+        "labels": null,
         "choices": {
           "bible_verse": {
             "type": "Slice",
@@ -234,6 +234,30 @@
                 "config": {
                   "single": "paragraph",
                   "label": "Meta description"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "newsletter_signup": {
+            "type": "Slice",
+            "fieldset": "Newsletter Signup",
+            "description": "Newsletter sign up form",
+            "icon": "email",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Heading"
+                }
+              },
+              "body_text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "body text"
                 }
               }
             },

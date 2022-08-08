@@ -31,6 +31,7 @@ export const query = graphql`
           ...HomepageDataBodyCallToAction
           ...HomepageDataBodyContentBlock
           ...HomepageDataBodySeo
+          ...HomepageDataBodyNewsletterSignup
         }
       }
     }

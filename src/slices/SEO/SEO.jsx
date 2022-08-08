@@ -2,8 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-const SEO = ({ title, description, slice }) => {
-  console.log(slice)
+const SEO = ({ slice }) => {
   return (
     <Helmet
       htmlAttributes={{
@@ -21,6 +20,37 @@ export default SEO
 
 export const query = graphql`
   fragment HomepageDataBodySeo on PrismicHomepageDataBodySeo {
+    primary {
+      page_title {
+        text
+      }
+      meta_description {
+        text
+      }
+    }
+  }
+  fragment PageDataBodySeo on PrismicPageDataBodySeo {
+    primary {
+      page_title {
+        text
+      }
+      meta_description {
+        text
+      }
+    }
+  }
+  fragment BlogPostDataBodySeo on PrismicBlogPostDataBodySeo {
+    primary {
+      page_title {
+        text
+      }
+      meta_description {
+        text
+      }
+    }
+  }
+
+  fragment SermonSeriesDataBodySeo on PrismicSermonSeriesDataBodySeo {
     primary {
       page_title {
         text

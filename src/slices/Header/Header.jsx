@@ -17,6 +17,37 @@ import {
 } from "./HeaderElements"
 
 const index = ({ slice }) => {
+  {
+    console.log(slice)
+  }
+
+  if (!slice.items[0]) {
+    return (
+      <HeaderElement>
+        <HeaderContainer>
+          <HeaderTextContainer bg={slice.primary.image.url}>
+            <Link to={"/"}>
+              <HeaderLogo>
+                <StaticImage src="../../images/LogoHome.png" />
+              </HeaderLogo>
+            </Link>
+            <HeaderHeading
+              dangerouslySetInnerHTML={{
+                __html: `${slice.primary.heading.text}`,
+              }}
+            />
+            <HeaderBody
+              dangerouslySetInnerHTML={{
+                __html: `${slice.primary.body_text.text}`,
+              }}
+            />
+          </HeaderTextContainer>
+          <HeaderImageContainer bg={slice.primary.image.url} />
+        </HeaderContainer>
+      </HeaderElement>
+    )
+  }
+
   return (
     <HeaderElement>
       <HeaderContainer>
