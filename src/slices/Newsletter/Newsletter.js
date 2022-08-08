@@ -22,7 +22,12 @@ const Newsletter = ({ slice }) => {
         <TextContainer>
           <Heading>{slice.primary.heading.text}</Heading>
           <Body>{slice.primary.body_text.text}</Body>
-          <Form name="newsletter" method="POST" data-netlify="true">
+          <Form
+            name="newsletter"
+            method="POST"
+            data-netlify="true"
+            action="/newsletter-thank-you"
+          >
             <input type="hidden" name="form-name" value="newsletter" />
             <FormInputContainer>
               <Input

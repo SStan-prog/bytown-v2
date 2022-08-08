@@ -22,7 +22,12 @@ const ContactForm = ({ slice }) => {
         <Body
           dangerouslySetInnerHTML={{ __html: `${slice.primary.body1.html}` }}
         />
-        <Form name="contact" method="POST" data-netlify="true">
+        <Form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/contact-thank-you"
+        >
           <input type="hidden" name="form-name" value="contact" />
           <FormInputContainer>
             <FormLabel>Name</FormLabel>
