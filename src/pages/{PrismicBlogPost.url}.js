@@ -30,6 +30,7 @@ export const query = graphql`
           ...BlogPostDataBodyCallToAction
           ...BlogPostDataBodyBibleVerse
           ...BlogPostDataBodyBlogContent
+          ...BlogPostDataBodySeo
         }
       }
     }

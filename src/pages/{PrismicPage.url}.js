@@ -51,6 +51,7 @@ export const query = graphql`
           ...PageDataBodyContactForm
           ...PageDataBodyLatestSermon
           ...PageDataBodyAllSeries
+          ...PageDataBodySeo
         }
       }
     }

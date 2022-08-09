@@ -29,6 +29,7 @@ export const query = graphql`
           ...SermonSeriesDataBodyHeader
           ...SermonSeriesDataBodyCallToAction
           ...SermonSeriesDataBodySermonArchive
+          ...SermonSeriesDataBodySeo
         }
       }
     }
