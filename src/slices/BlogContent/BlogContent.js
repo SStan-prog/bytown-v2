@@ -5,7 +5,6 @@ import { PrismicRichText } from "@prismicio/react"
 import { Section, Container } from "./BlogContentElement"
 
 const BlogContent = ({ slice }) => {
-  console.log(slice.primary.main_text.html)
   return (
     <Section>
       <Container

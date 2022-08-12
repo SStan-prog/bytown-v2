@@ -40,17 +40,50 @@ export const SeriesArchive = styled.div`
   `}
 `
 export const SeriesLink = styled(Link)``
-export const SeriesImageWrapper = styled.div`
+export const SeriesImageWrapper = styled.article`
   max-width: 100%;
   height: auto;
+
+  position: relative;
 `
+
+export const SeriesImageFilter = styled.div`
+  width: 100%;
+  height: calc(100% - 2px);
+  top: 0;
+  position: absolute;
+
+  background: rgba(0, 0, 0, 0.2);
+`
+
 export const SeriesImage = styled.img`
   object-fit: cover;
   width: 100%;
   height: 30rem;
 
-  ${media.tabport`
+  /* ${media.tabport`
   width: 100%;
   height: auto;
+
+  max-height: 30rem;
+  `} */
+`
+
+export const SeriesHeading = styled.h3`
+  position: absolute;
+  z-index: 2;
+  color: var(--color-white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: var(--font-heading);
+  font-size: var(--font-size-headingM);
+  text-align: center;
+  width: 100%;
+  padding: 0 2.5rem;
+
+  ${media.phone`
+    padding: 0 1.5rem;
   `}
 `

@@ -9,10 +9,14 @@ import {
   SeriesLink,
   SeriesImage,
   SeriesImageWrapper,
+  SeriesImageFilter,
+  SeriesHeading,
 } from "./AllSeriesElements"
 
 const AllSeries = ({ slice }) => {
-  console.log(slice.items[1].series_archive.document)
+  {
+    console.log(slice)
+  }
   return (
     <Section>
       <Container>
@@ -21,6 +25,12 @@ const AllSeries = ({ slice }) => {
           {slice.items.map(item => (
             <SeriesLink to={item.series_archive.url}>
               <SeriesImageWrapper>
+                <SeriesHeading>
+                  {
+                    item.series_archive.document.data.body[0].primary.heading
+                      .text
+                  }
+                </SeriesHeading>
                 <SeriesImage
                   src={
                     item.series_archive.document.data.body[0].primary.image.url
@@ -29,6 +39,7 @@ const AllSeries = ({ slice }) => {
                     item.series_archive.document.data.body[0].primary.image.alt
                   }
                 />
+                <SeriesImageFilter />
               </SeriesImageWrapper>
             </SeriesLink>
           ))}
@@ -59,6 +70,9 @@ export const query = graphql`
                 ... on PrismicSermonSeriesDataBodyHeader {
                   id
                   primary {
+                    heading {
+                      text
+                    }
                     image {
                       url
                       alt
