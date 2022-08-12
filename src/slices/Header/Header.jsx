@@ -17,10 +17,6 @@ import {
 } from "./HeaderElements"
 
 const index = ({ slice }) => {
-  {
-    console.log(slice)
-  }
-
   if (!slice.items[0]) {
     return (
       <HeaderElement>
