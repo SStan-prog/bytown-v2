@@ -34,24 +34,22 @@ module.exports = {
         },
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/assets`,
       },
     },
+
     // {
     //   resolve: "gatsby-plugin-manifest",
     //   options: {
-    //     name: `Bytown Church`,
-    //     short_name: `Bytown Church`,
-    //     start_url: `/`,
-    //     background_color: `#F0F8EA`,
-    //     theme_color: `#F0F8EA`,
-    //     icon: `content/assets/favicon.png`,
+    //     icon: "src/images/favi.png",
     //   },
     // },
+
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
