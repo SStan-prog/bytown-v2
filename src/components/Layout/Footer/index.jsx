@@ -61,7 +61,7 @@ const index = () => {
             </FooterListExternalLink>
           </FooterListItem>
           <FooterListItem>
-            <FooterListExternalLink href="tel:(613) 316 - 6474">
+            <FooterListExternalLink href="tel:6133166474">
               (613) 316 - 6474
             </FooterListExternalLink>
           </FooterListItem>
