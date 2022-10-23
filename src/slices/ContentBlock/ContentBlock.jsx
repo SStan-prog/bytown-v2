@@ -7,12 +7,15 @@ import {
   ContentBlockImageContainer,
   ContentBlockTextContainer,
   ContentBlockTextHeading,
+  ContentBlockTextSubHeading,
   ContentBlockTextBody,
 } from "./ContentBlockElements"
 
 import { ButtonRed } from "../../components/Buttons"
 
 const ContentBlock = ({ slice }) => {
+  console.log(slice)
+
   let blockId = ""
   if (slice.primary.block_id === null) {
     blockId = "block"
@@ -39,6 +42,15 @@ const ContentBlock = ({ slice }) => {
               __html: `${slice.primary.title.text}`,
             }}
           />
+
+          {slice.primary.subtitle.text && (
+            <ContentBlockTextSubHeading
+              dangerouslySetInnerHTML={{
+                __html: `${slice.primary.subtitle.text}`,
+              }}
+            />
+          )}
+
           <ContentBlockTextBody
             dangerouslySetInnerHTML={{
               __html: `${slice.primary.description.html}`,

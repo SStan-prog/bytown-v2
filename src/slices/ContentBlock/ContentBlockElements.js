@@ -129,6 +129,13 @@ export const ContentBlockTextHeading = styled.h2`
   font-family: var(--font-heading);
   font-weight: 700;
 `
+export const ContentBlockTextSubHeading = styled.h3`
+  font-size: var(--font-size-bodyL);
+  font-family: var(--font-body);
+  font-weight: 700;
+  margin-bottom: 1rem;
+`
+
 export const ContentBlockTextBody = styled.div`
   font-size: var(--font-size-bodyM);
   font-family: var(--font-body);
