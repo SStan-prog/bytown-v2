@@ -22,7 +22,7 @@ const index = ({ open, toggle }) => {
           <ItemLink to="/giving">Giving</ItemLink>
         </Item>
         <Item onClick={toggle}>
-          <Cta to="/join-us">Cta</Cta>
+          <Cta to="/join-us">Join Us</Cta>
         </Item>
       </List>
     </Nav>
